@@ -1,0 +1,64 @@
+{
+  "api": {
+    "developapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "developlambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "developlambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "thisShouldNotWork": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_developlambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "developlambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_developlambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "developlambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_thisShouldNotWork_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "thisShouldNotWork"
+        }
+      ]
+    },
+    "AMPLIFY_function_thisShouldNotWork_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "thisShouldNotWork"
+        }
+      ]
+    }
+  }
+}
