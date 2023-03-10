@@ -15,8 +15,41 @@
       "service": "API Gateway"
     }
   },
+  "auth": {
+    "ahmedappdevelop65c7569e": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
   "function": {
     "developlambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "thisShouldAlsoNotWork": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -41,6 +74,22 @@
         {
           "category": "function",
           "resourceName": "developlambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_thisShouldAlsoNotWork_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "thisShouldAlsoNotWork"
+        }
+      ]
+    },
+    "AMPLIFY_function_thisShouldAlsoNotWork_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "thisShouldAlsoNotWork"
         }
       ]
     },

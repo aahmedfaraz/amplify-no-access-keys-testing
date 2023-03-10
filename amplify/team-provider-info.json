@@ -20,7 +20,18 @@
         "thisShouldNotWork": {
           "deploymentBucketName": "amplify-ahmedappdevelop-develop-201501-deployment",
           "s3Key": "amplify-builds/thisShouldNotWork-7a446e364b3443597132-build.zip"
+        },
+        "thisShouldAlsoNotWork": {
+          "deploymentBucketName": "amplify-ahmedappdevelop-develop-201501-deployment",
+          "s3Key": "amplify-builds/thisShouldAlsoNotWork-4837416a3968724d755a-build.zip"
         }
+      },
+      "auth": {
+        "ahmedappdevelop751f5b10": {},
+        "ahmedappdevelop65c7569e": {}
+      },
+      "api": {
+        "developapi": {}
       }
     }
   }
